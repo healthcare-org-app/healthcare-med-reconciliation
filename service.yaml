@@ -1,0 +1,13 @@
+name: med-reconciliation-service
+port: 8304
+lang: python
+description: "med-reconciliation-service \u2014 domain: ehr"
+http_deps:
+- prescriptions-service
+- ehr-service
+- audit-log-service
+publishes:
+- audit.event
+subscribes:
+- encounter.started
+- prescription.issued
