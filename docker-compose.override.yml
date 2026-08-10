@@ -1,7 +1,7 @@
 services:
   med-reconciliation-service:
     build: .
-    container_name: ${NAME_UNDERSCORE}
+    container_name: med_reconciliation_service
     depends_on:
       postgres:
         condition: service_healthy
